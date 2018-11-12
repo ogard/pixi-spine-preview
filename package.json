@@ -1,0 +1,60 @@
+{
+  "name": "pixi-spine-preview",
+  "version": "0.0.1",
+  "description": "Web based tool for previewing pixi spine animations from file system",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "lint": "eslint ./src",
+    "fix-prettier": "prettier --write \"src/**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogard/pixi-spine-preview.git"
+  },
+  "keywords": [
+    "pixi",
+    "javascript"
+  ],
+  "author": "Drago Odalovic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ogard/pixi-spine-preview/issues"
+  },
+  "homepage": "https://github.com/ogard/pixi-spine-preview#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-regenerator": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^1.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-react": "^7.11.1",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.14.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@babel/runtime": "^7.1.5",
+    "pixi.js": "^4.8.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-dropzone": "^7.0.1",
+    "react-pixi": "^0.9.19",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-saga": "^0.16.2"
+  }
+}
