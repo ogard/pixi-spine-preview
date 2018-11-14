@@ -1,0 +1,123 @@
+
+reel_frame.png
+size: 2034,2022
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+other/magma
+  rotate: false
+  xy: 0, 44
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+reel_frame/egg
+  rotate: false
+  xy: 1524, 100
+  size: 197, 250
+  orig: 197, 250
+  offset: 0, 0
+  index: -1
+reel_frame/egg_logo_ref
+  rotate: true
+  xy: 1183, 8
+  size: 85, 123
+  orig: 85, 123
+  offset: 0, 0
+  index: -1
+reel_frame/frame_fs_mode
+  rotate: false
+  xy: 0, 546
+  size: 2018, 1476
+  orig: 2018, 1476
+  offset: 0, 0
+  index: -1
+reel_frame/glow_frame_02
+  rotate: true
+  xy: 925, 95
+  size: 449, 597
+  orig: 449, 597
+  offset: 0, 0
+  index: -1
+reel_frame/lava_frame_a
+  rotate: true
+  xy: 1740, 226
+  size: 124, 287
+  orig: 124, 287
+  offset: 0, 0
+  index: -1
+reel_frame/lava_rame_b
+  rotate: true
+  xy: 1740, 352
+  size: 192, 294
+  orig: 192, 294
+  offset: 0, 0
+  index: -1
+reel_frame/rim_frame_logo
+  rotate: false
+  xy: 1308, 11
+  size: 430, 82
+  orig: 430, 82
+  offset: 0, 0
+  index: -1
+reel_frame/rim_frame_top
+  rotate: false
+  xy: 0, 0
+  size: 1181, 42
+  orig: 1181, 42
+  offset: 0, 0
+  index: -1
+reel_frame/vains_01
+  rotate: false
+  xy: 502, 49
+  size: 421, 495
+  orig: 421, 495
+  offset: 0, 0
+  index: -1
+
+reel_frame2.png
+size: 2018,1838
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+reel_frame/frame_normal_mode
+  rotate: false
+  xy: 0, 362
+  size: 2018, 1476
+  orig: 2018, 1476
+  offset: 0, 0
+  index: -1
+reel_frame/rim_frame_bottom
+  rotate: false
+  xy: 0, 0
+  size: 1965, 360
+  orig: 1965, 360
+  offset: 0, 0
+  index: -1
+
+reel_frame3.png
+size: 991,667
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+reel_frame/glow_frame_01
+  rotate: false
+  xy: 0, 0
+  size: 412, 667
+  orig: 412, 667
+  offset: 0, 0
+  index: -1
+reel_frame/hide
+  rotate: false
+  xy: 414, 2
+  size: 577, 248
+  orig: 577, 248
+  offset: 0, 0
+  index: -1
+reel_frame/vains_02
+  rotate: true
+  xy: 414, 252
+  size: 415, 573
+  orig: 415, 573
+  offset: 0, 0
+  index: -1

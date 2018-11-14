@@ -22,32 +22,44 @@ class DragNDrop extends React.Component {
   }
 
   onDrop = files => {
-    const file = files[0]
-    const reader = new FileReader()
-    reader.onloadstart = () => {
-      this.props.onStartReadingFile()
-    }
-    // reader.readAsArrayBuffer(file)
-    reader.readAsDataURL(file)
-    reader.onload = readerEvt => {
-      // console.log(readerEvt)
-      // const arrayBuffer = readerEvt.target.result
-      // console.log(typeof arrayBufferToBase64(arrayBuffer))
-      // window.localStorage.setItem(file.name, arrayBufferToBase64(arrayBuffer))
-      this.props.onSuccessReadingFile({
-        dokumentNaziv: file.name,
-        dokumentSadrzaj: readerEvt.target.result,
-      })
-    }
-    reader.onerror = errorEvent => {
-      this.props.onFailReadingFile(errorEvent)
-    }
+    files.forEach(file => {
+      const reader = new FileReader()
+      reader.onloadstart = () => {
+        this.props.onStartReadingFile()
+      }
+      if (!file.name.includes('json')) {
+        reader.readAsDataURL(file)
+        reader.onload = readerEvt => {
+          this.props.onSuccessReadingFile({
+            type: 'asset',
+            name: file.name,
+            dataUri: readerEvt.target.result,
+          })
+        }
+      } else {
+        reader.readAsText(file)
+        reader.onload = readerEvt => {
+          this.props.onSuccessReadingFile({
+            type: 'json',
+            name: file.name,
+            content: JSON.parse(readerEvt.target.result),
+          })
+        }
+      }
+      reader.onerror = errorEvent => {
+        this.props.onFailReadingFile(errorEvent)
+      }
+    })
   }
 
   render() {
     const { file, reading } = this.props
     return (
-      <Dropzone multiple={false} onDrop={files => this.onDrop(files)} style={{ height: 200, position: 'relative' }}>
+      <Dropzone
+        multiple={true}
+        onDrop={files => this.onDrop(files)}
+        style={{ border: '2px solid red', width: 200, height: 200, position: 'relative' }}
+      >
         <div
           style={{
             position: 'absolute',
@@ -59,7 +71,6 @@ class DragNDrop extends React.Component {
         >
           {(() => {
             if (file.length > 0) {
-              console.log(window.localStorage)
               return reading === true ? (
                 <div title="Учитавање одабраног документa">
                   <i className="fa fa-spinner fa-spin fa-3x" />
@@ -67,8 +78,8 @@ class DragNDrop extends React.Component {
               ) : (
                 <div>
                   {/* <img src={`data:image/gif;base64,${file[0].dokumentSadrzaj}`} /> */}
-                  <img src={file[0].dokumentSadrzaj} />
-                  <p>{`Одабрани документ: ${file[0].dokumentNaziv}`}</p>
+                  <img src={file[0].dataUri} />
+                  <p>{`Одабрани документ: ${file[0].name}`}</p>
                 </div>
               )
             }
