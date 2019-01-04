@@ -37,7 +37,7 @@ const renderPlayPauseButton = (action, disabled, dispatch) => {
 }
 
 const View = ({ selectedAnimation, animations, spineAction, dispatch }) => (
-  <div style={{ display: 'flex', flexWrap: 'nowrap', width: '100%', backgroundColor: 'red' }}>
+  <div id="ui">
     <IconButton title="Upload" onClick={() => dispatch({ type: LOADER_OPEN })}>
       <CloudUploadIcon />
     </IconButton>
