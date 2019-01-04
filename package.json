@@ -1,5 +1,5 @@
 {
-  "name": "pixi-spine-preview",
+  "name": "pixi-spine-previewer",
   "version": "0.0.1",
   "description": "Web based tool for previewing pixi spine animations from file system",
   "private": true,
@@ -13,7 +13,8 @@
     "url": "git+https://github.com/ogard/pixi-spine-preview.git"
   },
   "keywords": [
-    "pixi",
+    "pixi.js",
+    "pixi-spine",
     "javascript"
   ],
   "author": "Drago Odalovic",
@@ -47,13 +48,18 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@babel/runtime": "^7.1.5",
+    "@babel/runtime": "7.0.0-beta.55",
+    "@material-ui/icons": "^3.0.1",
+    "material-ui": "^0.20.1",
+    "pixi-spine": "^1.5.19",
     "pixi.js": "^4.8.2",
+    "prop-types": "^15.6.2",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
     "react-dropzone": "^7.0.1",
     "react-pixi": "^0.9.19",
     "react-redux": "^5.1.1",
+    "react-toastify": "^4.5.1",
     "redux": "^4.0.1",
     "redux-saga": "^0.16.2"
   }

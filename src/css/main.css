@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+#root > div > div:nth-child(1) {
+  font-size: 0;
+}
+
+#adjuster-content {
+  min-width: 20vw;
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#adjuster-content > #reset-spine-adjustmens {
+  align-self: flex-end;
+}
