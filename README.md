@@ -1,4 +1,4 @@
-### pixi-spine-previewer
+### pixi-spine-viewer
 - Web based tool for previewing pixi spine animations from file system
 
 ### Usage
@@ -12,7 +12,7 @@
 
 #### TODO
 - support for loading zip files
-- supprt for loading atlas with multiple images referenced
+- support for loading atlas with multiple images referenced
 - more spine manipulations
 - handle resize of spine
 - incorporate sound manipulation feature
