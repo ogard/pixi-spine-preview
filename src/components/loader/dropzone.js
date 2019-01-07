@@ -48,7 +48,7 @@ export default class Dropzone extends React.Component {
             url: readerEvent.target.result,
           })
           if (index === files.length - 1) {
-            this.onEnd()
+            setTimeout(this.onEnd, 1500)
           }
         }
       } else {

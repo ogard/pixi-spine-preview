@@ -1,5 +1,5 @@
 {
-  "name": "pixi-spine-previewer",
+  "name": "pixi-spine-viewer",
   "version": "0.0.1",
   "description": "Web based tool for previewing pixi spine animations from file system",
   "private": true,
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ogard/pixi-spine-preview.git"
+    "url": "git+https://github.com/ogard/pixi-spine-viewer.git"
   },
   "keywords": [
     "pixi.js",
@@ -20,9 +20,9 @@
   "author": "Drago Odalovic",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ogard/pixi-spine-preview/issues"
+    "url": "https://github.com/ogard/pixi-spine-viewer/issues"
   },
-  "homepage": "https://github.com/ogard/pixi-spine-preview#readme",
+  "homepage": "https://github.com/ogard/pixi-spine-viewer#readme",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",

@@ -14,7 +14,10 @@ import reducer from './redux/reducer'
 import sagas from './redux/sagas'
 import Layout from './components/layout'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ maxAge: 100 }) || compose
+const composeEnhancers =
+  typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ maxAge: 100 })
+    : compose
 
 const sagaMiddleware = createSagaMiddleware()
 

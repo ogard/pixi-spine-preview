@@ -7,6 +7,7 @@ import { toast } from 'react-toastify'
 
 import { LOADER_START_READING, LOADER_END_READING } from './constants'
 import { closeLoader, setSpineData, reset } from './actions'
+import { convertUrlToBase64 } from '../utils'
 
 export default function*() {
   yield takeEvery(LOADER_START_READING, resetState)
@@ -28,15 +29,14 @@ function* processLoader(action) {
         const atlas = files.find(x => x.type === 'atlas')
         const skeleton = files.find(x => x.type === 'skeleton')
         const images = files.filter(x => x.type === 'image')
-        const rawAtlasData = atob(atlas.url.split(',').pop())
-        const rawSkeletonData = atob(skeleton.url.split(',').pop())
+        const rawAtlasData = convertUrlToBase64(atlas.url)
+        const rawSkeletonData = convertUrlToBase64(skeleton.url)
 
-        const spineAtlas = new PIXI.spine.core.TextureAtlas(rawAtlasData, function(line, callback) {
-          images.forEach(image => {
-            const img = new Image()
-            img.src = image.url
-            callback(new PIXI.BaseTexture(img))
-          })
+        const spineAtlas = new PIXI.spine.core.TextureAtlas(rawAtlasData, (line, callback) => {
+          const targetImage = images.find(x => x.name === line)
+          const img = new Image()
+          img.src = targetImage.url
+          callback(new PIXI.BaseTexture(img))
         })
 
         const spineAtlasLoader = new PIXI.spine.core.AtlasAttachmentLoader(spineAtlas)

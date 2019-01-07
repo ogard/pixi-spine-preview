@@ -42,6 +42,7 @@
     ],
     "arrow-body-style": ["error", "as-needed"],
     "func-style": ["error", "expression"],
+    "eol-last": ["error", "always"],
     "react/display-name": ["off"],
     "react/prop-types": ["off"]
   }
