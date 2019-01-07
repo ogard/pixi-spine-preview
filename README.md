@@ -1,5 +1,5 @@
 ### pixi-spine-viewer
-- Web based tool for previewing pixi spine animations from file system
+- Web based tool for vieving pixi spine animations from file system
 
 ### Usage
 
@@ -11,8 +11,7 @@
 - React v15
 
 #### TODO
-- support for loading zip files
-- support for loading atlas with multiple images referenced
-- more spine manipulations
+- add support for loading zip files
+- enable more spine manipulations
 - handle resize of spine
 - incorporate sound manipulation feature

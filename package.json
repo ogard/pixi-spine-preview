@@ -1,7 +1,7 @@
 {
   "name": "pixi-spine-viewer",
   "version": "0.0.1",
-  "description": "Web based tool for previewing pixi spine animations from file system",
+  "description": "Web based tool for viewing pixi spine animations from file system",
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --open --mode development",

@@ -13,10 +13,18 @@ import './css/main.css'
 import reducer from './redux/reducer'
 import sagas from './redux/sagas'
 import Layout from './components/layout'
+import { ADD_FILE } from './redux/constants'
+
+const transformFileForDevTools = file => ({ ...file, url: '<<LONG_BLOB>>' })
+
+const actionSanitizer = action =>
+  action.type === ADD_FILE && action.file ? { ...action, file: transformFileForDevTools(action.file) } : action
+
+const stateSanitizer = state => (state.files ? { ...state, files: state.files.map(transformFileForDevTools) } : state)
 
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ maxAge: 100 })
+    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({ maxAge: 100, actionSanitizer, stateSanitizer })
     : compose
 
 const sagaMiddleware = createSagaMiddleware()
