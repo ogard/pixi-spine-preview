@@ -12,6 +12,7 @@
 
 #### TODO
 - add support for loading zip files
+- enable fps meter
 - enable more spine manipulations
 - handle resize of spine
 - incorporate sound manipulation feature
