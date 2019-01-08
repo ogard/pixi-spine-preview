@@ -9,9 +9,15 @@ body {
 #ui {
   display: flex;
   flex-wrap: nowrap;
-  width: 100%;
+  flex-grow: 1;
   background: #FF0000;
   background: linear-gradient(#93291E, #ED213A);
+}
+
+#fps-meter-anchor {
+  position: absolute;
+  right: 123px;
+  bottom: 43px;
 }
 
 #adjuster-content {
